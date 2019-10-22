@@ -20,6 +20,8 @@ import org.jbox2d.common.Vec2;
 import com.sapos_aplastados.game.clash_of_balls.game.Vector;
 
 import android.util.FloatMath;
+import java.lang.Math;
+
 
 /**
  * some math functions for (2D) vectors
@@ -31,7 +33,7 @@ public class Maths {
 		return (a.x-b.x) * (a.x-b.x) + (a.y-b.y) * (a.y-b.y);
 	}
 	public static float dist(Vector a, Vector b) {
-		return FloatMath.sqrt((a.x-b.x) * (a.x-b.x) + (a.y-b.y) * (a.y-b.y));
+		return (float) Math.sqrt((a.x-b.x) * (a.x-b.x) + (a.y-b.y) * (a.y-b.y));
 	}
 	
 }

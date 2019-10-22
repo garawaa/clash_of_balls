@@ -19,7 +19,7 @@ package com.sapos_aplastados.game.clash_of_balls.game;
 import org.jbox2d.common.Vec2;
 
 import android.util.FloatMath;
-
+import java.lang.Math;
 
 public class Vector {
 	
@@ -58,7 +58,7 @@ public class Vector {
 
 	
 	public float length() { 
-		return FloatMath.sqrt((x * x) + (y * y));
+		return (float)Math.sqrt((x * x) + (y * y));
 	}
 	
 	public float lengthSquared() { 
@@ -81,7 +81,7 @@ public class Vector {
 		return (x-p.x) * (x-p.x) + (y-p.y) * (y-p.y);
 	}
 	public float dist(Vector p) {
-		return FloatMath.sqrt((x-p.x) * (x-p.x) + (y-p.y) * (y-p.y));
+		return (float)Math.sqrt((x-p.x) * (x-p.x) + (y-p.y) * (y-p.y));
 	}
 
 	public float angle() {
@@ -122,8 +122,8 @@ public class Vector {
 	}
 
 	public void rotate(float dAlfa_rad) {
-		float nCos = FloatMath.cos(dAlfa_rad);
-		float nSin = FloatMath.sin(dAlfa_rad);
+		float nCos = (float) Math.cos(dAlfa_rad);
+		float nSin = (float) Math.sin(dAlfa_rad);
 		
 		float iX = x * nCos - y * nSin;
 		float iY = y * nCos + x * nSin;

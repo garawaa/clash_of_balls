@@ -112,7 +112,7 @@ public class GameItem extends DynamicGameObject {
 			}
 		} else if(!m_is_static) {
 			m_time_accumulator += dsec;
-			float d = 1.f-FloatMath.sin(FloatMath.cos(m_time_accumulator*4.f)+1.f);
+			float d = 1.f-(float)Math.sin((float)Math.cos(m_time_accumulator*4.f)+1.f);
 			m_scaling = 1.f + d*d*0.15f;
 			if(m_time_accumulator > item_timeout) die();
 		}

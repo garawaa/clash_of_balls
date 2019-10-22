@@ -17,6 +17,7 @@
 package com.sapos_aplastados.game.clash_of_balls.game;
 
 import android.util.FloatMath;
+import java.lang.Math;
 
 public class Vector3D {
 
@@ -54,7 +55,7 @@ public class Vector3D {
 	
 
 	public float length() { 
-		return FloatMath.sqrt((x * x) + (y * y) + (z * z));
+		return (float)Math.sqrt((x * x) + (y * y) + (z * z));
 	}
 	
 	public float lengthSquared() { 
@@ -130,8 +131,8 @@ public class Vector3D {
 	//rotate this vector around vector n, by angle radians
 	//n will be normalized
 	public void rotate(Vector3D n, float angle) {
-		float ca=FloatMath.cos(angle);
-		float sa=FloatMath.sin(angle);
+		float ca=(float)Math.cos(angle);
+		float sa=(float)Math.sin(angle);
 		
 		float len=n.length();
 		if(len==0.0f || angle==0.f) return;
